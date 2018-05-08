@@ -1,0 +1,26 @@
+group 'AppMotociclism'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName='main.Main'
+
+jar {
+    manifest {
+        attributes('Main-Class':'Main')
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project ('model')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

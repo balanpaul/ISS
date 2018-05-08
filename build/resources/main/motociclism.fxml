@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="463.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MotociclismController">
+   <children>
+      <TableView fx:id="TableViewEchipa" layoutX="53.0" layoutY="75.0" prefHeight="305.0" prefWidth="347.0">
+        <columns>
+          <TableColumn fx:id="ColumnId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="ColumnDenumire" prefWidth="106.0" text="Denumire" />
+            <TableColumn fx:id="ColumnCapacitate" prefWidth="114.0" text="Capacitate" />
+        </columns>
+      </TableView>
+      <TextField fx:id="fieldId" layoutX="519.0" layoutY="88.0" />
+      <TextField fx:id="fieldDenumire" layoutX="519.0" layoutY="135.0" />
+      <TextField fx:id="fieldCapacitate" layoutX="519.0" layoutY="185.0" />
+      <Label layoutX="439.0" layoutY="93.0" text="id" />
+      <Label layoutX="439.0" layoutY="140.0" text="denumire" />
+      <Label layoutX="439.0" layoutY="190.0" text="capacitate" />
+      <Button fx:id="btnAdauga" layoutX="442.0" layoutY="350.0" mnemonicParsing="false" onAction="#saveEchipa" text="Adauga" />
+      <Button fx:id="btnModifica" layoutX="548.0" layoutY="350.0" mnemonicParsing="false" onAction="#updateEchipa" text="Modifica" />
+      <Button fx:id="btnSterge" layoutX="652.0" layoutY="350.0" mnemonicParsing="false" onAction="#deleteEchipa" text="Sterge" />
+   </children>
+</AnchorPane>
